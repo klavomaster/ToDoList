@@ -1,0 +1,9 @@
+-- CreateTable
+CREATE TABLE "ToDoList" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL,
+    "order" INTEGER NOT NULL,
+    "status" INTEGER NOT NULL,
+    "userId" INTEGER NOT NULL,
+    CONSTRAINT "ToDoList_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
